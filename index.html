@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile cá nhân</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <main id="home">
+            <section class="profile">
+                <div class="container">
+                    <div class="profile-content">
+                        <p class="label">Profile Cá nhân</p>
+                        <h1>Nguyễn Xuân Hiếu</h1>
+                        <p>Sinh viên năm 2</p>
+                    </div>
+                    <div class="profile-image">
+                        <img src="c:\Users\LOQ\OneDrive\Pictures\z6951440079753_189133cbbc2fb4c528f52e04c24ff375.jpg" alt="Ảnh đại diện" />
+                    </div>
+                </div>
+            </section>
+
+            <div class="container navigation">
+                <div class="navigation-actions">
+                    <button id="menuToggle" type="button" aria-expanded="false" aria-controls="menu">
+                        <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
+                        <span>Menu</span>
+                    </button>
+                    <button id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối">
+                        <span aria-hidden="true">&#9790;</span>
+                        <span>Giao diện tối</span>
+                    </button>
+                </div>
+                <aside id="menu" hidden>
+                    <nav class="menu link">
+                        <a href="#home">Trang chủ</a>
+                        <a href="#about">Giới thiệu</a>
+                        <a href="#skills">Kỹ năng</a>
+                        <a href="#projects">Dự án</a>
+                        <a href="#contact">Liên hệ</a>
+                    </nav>
+                </aside>
+            </div>
+
+            <section id="about" class="reveal">
+                <div class="container">
+                    <h2>Giới thiệu</h2>
+                    <p>Xin chào! Tôi là Nguyễn Xuân Hiếu</p>
+                    <ul>
+                        <li>Học tại: Học Viện Công nghệ Bưu Chính Viễn Thông</li>
+                        <li>Ngành học: Công nghệ thông tin</li>
+                        <li>Chuyên ngành: Kỹ thuật phần mềm</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="skills" class="reveal">
+                <div class="container">
+                    <h2>Kỹ năng</h2>
+                    <ul>
+                        <li>Ngôn ngữ lập trình: Java, Python</li>
+                        <li>Phát triển web: HTML, CSS, JavaScript</li>
+                        <li>Cơ sở dữ liệu: MySQL, MongoDB</li>
+                        <li>Hệ điều hành: Windows, Linux</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects" class="reveal">
+                <div class="container">
+                    <h2>Dự án</h2>
+                    <div class="project-tools">
+                        <label for="projectSearch">Tìm dự án</label>
+                        <input id="projectSearch" type="search" placeholder="Nhập từ khóa..." />
+                        <select id="projectFilter" aria-label="Lọc dự án theo công nghệ">
+                            <option value="all">Tất cả công nghệ</option>
+                            <option value="java">Java</option>
+                            <option value="web">Web</option>
+                            <option value="database">Database</option>
+                        </select>
+                    </div>
+                    <div class="project-list">
+                        <article class="project-card" data-tags="java database">
+                            <h3>Hệ thống quản lý chi tiêu</h3>
+                            <p>Ứng dụng quản lý thu chi cá nhân.</p>
+                            <span>Java · Database</span>
+                        </article>
+                        <article class="project-card" data-tags="java web">
+                            <h3>Tool đăng kí tín chỉ</h3>
+                            <p>Công cụ hỗ trợ đăng kí tín chỉ nhanh chóng.</p>
+                            <span>Java · Web</span>
+                        </article>
+                        <article class="project-card" data-tags="web database">
+                            <h3>Web bán hàng công nghệ</h3>
+                            <p>Website bán hàng công nghệ và điện tử.</p>
+                            <span>Web · Database</span>
+                        </article>
+                    </div>
+                    <p id="projectEmpty" class="empty-message" hidden>Không tìm thấy dự án phù hợp.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="reveal">
+                <div class="container">
+                    <h2>Liên hệ tôi</h2>
+                    <form id="contactForm">
+                        <label for="name">Tên:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="message">Tin nhắn:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Gửi</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </header>
+
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> hieuitptit1405@gmail.com</p>
+    </footer>
+</body>
+</html>
